@@ -1,0 +1,355 @@
+<!doctype html>
+<html class="no-js" lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/foundation.min.css">
+        <link rel="stylesheet" href="../css/motion-ui.min.css" />
+        <!-- <link rel="stylesheet" href="../css/foundation-float.min.css"> -->
+        <!-- <link rel="stylesheet" href="../css/foundation-prototype.min.css"> -->
+        <!-- <link rel="stylesheet" href="../css/foundation-rtl.min.css"> -->
+        <link rel="stylesheet" href="../css/index.css">
+        <script src="../js/jquery-3.4.1.min.js"></script>
+        <script src="../js/index.js"></script>
+        <title>疫情信息分享</title>
+	</head>
+<body>
+    <style>
+        /*icon styles*/
+        .fi-social-facebook {
+            color: dodgerblue;
+            font-size: 2rem;
+        }
+        .fi-social-youtube {
+            color: red;
+            font-size: 2rem;
+        }
+        .fi-social-pinterest {
+            color: darkred;
+            font-size: 2rem;
+        }
+        i.fi-social-instagram {
+            color: brown;
+            font-size: 2rem;
+        }
+        i.fi-social-tumblr {
+            color: navy;
+            font-size: 2rem;
+        }
+        .fi-social-twitter {
+            color: skyblue;
+            font-size: 2rem;
+        }
+    </style>
+
+    <!-- 导航栏 -->
+    <div>
+        <div class="title-bar" data-responsive-toggle="example-menu" data-hide-for="medium">
+            <button class="menu-icon" type="button" data-toggle="example-menu"></button>
+            <div class="title-bar-title">Menu</div>
+        </div>
+          
+        <div class="top-bar" id="example-menu">
+            <div class="top-bar-left">
+                <ul class="dropdown menu" data-dropdown-menu>
+                    <li class="menu-text">疫情信息分享</li>
+                    <li>
+                        <a href="#">最新消息</a>
+                        <ul class="menu vertical">
+                            <li><a href="#">疫情新闻</a></li>
+                            <li><a href="#">防疫知识</a></li>
+                            <li><a href="#">鉴真辟谣</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">疫情地图</a></li>
+                    <li><a href="#">发布文章</a></li>
+                </ul>
+            </div>
+            <div class="top-bar-right">
+                <ul class="menu">
+                    <li><a href="#">登录</a></li>
+                    <li><a href="#">注册</a></li>
+                    <li><input type="search" placeholder="输入你想了解的..."></li>
+                    <li><button type="button" class="button">搜索</button></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <br>
+
+    <!-- 轮播 -->
+    <div class="row">
+        <div class="orbit" role="region" aria-label="Favorite Space Pictures" data-orbit>
+            <div class="orbit-wrapper">
+                <div class="orbit-controls" >
+                    <button class="orbit-previous"><span class="show-for-sr">Previous Slide</span>&#9664;&#xFE0E;</button>
+                    <button class="orbit-next"><span class="show-for-sr">Next Slide</span>&#9654;&#xFE0E;</button>
+                </div>
+                <ul id="OrbitUl" class="orbit-container orbitBox">
+                    <li class="is-active orbit-slide">
+                        <figure class="orbit-figure">
+                            <img class="orbit-image slideImg" src="../imgs/harley-davidson-1HZcJjdtc9g-unsplash.jpg" alt="Space">
+                            <figcaption class="orbit-caption orbitCaption"><a href="" target="_blank" style="color: white;">Space, the final frontier.</a></figcaption>
+                        </figure>
+                    </li>
+                    <li class="orbit-slide">
+                        <figure class="orbit-figure">
+                            <img class="orbit-image slideImg" src="../imgs/cat.jpg" alt="Space">
+                            <figcaption class="orbit-caption orbitCaption">Lets Rocket!</figcaption>
+                        </figure>
+                    </li>
+                    <li class="orbit-slide">
+                        <figure class="orbit-figure">
+                            <img class="orbit-image slideImg" src="../imgs/img2.jpg" alt="Space">
+                            <figcaption class="orbit-caption orbitCaption">Encapsulating</figcaption>
+                        </figure>
+                    </li>
+                    <li class="orbit-slide">
+                        <figure class="orbit-figure">
+                            <img class="orbit-image slideImg" src="../imgs/harley-davidson-BW9ki_tmouE-unsplash.jpg" alt="Space">
+                            <figcaption class="orbit-caption orbitCaption">Outta This World</figcaption>
+                        </figure>
+                    </li>
+                    <li class="orbit-slide">
+                        <figure class="orbit-figure">
+                            <img class="orbit-image slideImg" src="../imgs/harley-davidson-BW9ki_tmouE-unsplash.jpg" alt="Space">
+                            <figcaption class="orbit-caption orbitCaption">Outta This World</figcaption>
+                        </figure>
+                    </li>
+                    <li class="orbit-slide">
+                        <figure class="orbit-figure">
+                            <img class="orbit-image slideImg" src="../imgs/harley-davidson-BW9ki_tmouE-unsplash.jpg" alt="Space">
+                            <figcaption class="orbit-caption orbitCaption">Outta This World</figcaption>
+                        </figure>
+                    </li>
+                </ul>
+            </div>
+            <nav class="orbit-bullets">
+                <button class="is-active" data-slide="0">
+                    <span class="show-for-sr">First slide details.</span>
+                    <span class="show-for-sr" data-slide-active-label>Current Slide</span>
+                </button>
+                <button data-slide="1"><span class="show-for-sr">Second slide details.</span></button>
+                <button data-slide="2"><span class="show-for-sr">Third slide details.</span></button>
+                <button data-slide="3"><span class="show-for-sr">Fourth slide details.</span></button>
+                <button data-slide="4"><span class="show-for-sr">fifth slide details.</span></button>
+                <button data-slide="5"><span class="show-for-sr">sixth slide details.</span></button>
+            </nav>
+        </div>
+    </div>
+    
+
+    <!-- 新闻栏目导航条 -->
+    <div class="row">
+        <ul class="menu AlignCenter" style="background-color: #eee;">
+            <li id="EpidemicNews" class="isActive"><a>疫情新闻</a></li>
+            <li id="PreventionKnowledge" class=""><a>防疫知识</a></li>
+            <li id="RumorRefuting" class=""><a>鉴真辟谣</a></li>
+        </ul>
+    </div>
+
+    <!-- 中间部分新闻列表内容 -->
+    <div class="row newsBox">
+
+        <!-- 新闻列表 -->
+        <div class="medium-8 large-8 columns" style="border-right: 1px solid #E3E5E8;">
+
+            <article id="NewsList">
+                <div class="row">
+                    <div class="medium-4 large-6 columns">
+                        <p><img src="../imgs/harley-davidson-BW9ki_tmouE-unsplash.jpg" alt="image for article" alt="article preview image"></p>
+                    </div>
+                    <div class="medium-8 large-6 columns">
+                        <h5><a href="#" target="_blank">'Death Star' Vaporizes Its Own Planet</a></h5>
+                        <p>
+                            <span><i class="fi-calendar"> 11/23/16 &nbsp;&nbsp;</i></span>
+                            <span><i class="fi-comments"> 6 comments</i></span>
+                        </p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae impedit beatae, ipsum delectus aperiam nesciunt magni facilis ullam.</p>
+                    </div>
+                </div>
+
+                <hr>
+
+                <div class="row">
+                    <div class="medium-4 large-6 columns">
+                        <p><img src="../imgs/cat.jpg" alt="image for article" alt="article preview image"></p>
+                    </div>
+                    <div class="medium-8 large-6 columns">
+                        <h5><a href="#">NASA's SLS Rocket Sheds Saturn V Color Scheme in Design Review</a></h5>
+                        <p>
+                            <span><i class="fi-torso"> By Thadeus &nbsp;&nbsp;</i></span>
+                            <span><i class="fi-calendar"> 11/23/16 &nbsp;&nbsp;</i></span>
+                            <span><i class="fi-comments"> 6 comments</i></span>
+                        </p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae impedit beatae, ipsum delectus aperiam nesciunt magni facilis ullam.</p>
+                    </div>
+                </div>
+
+                <hr>
+
+                <div class="row">
+                    <div class="medium-4 large-6 columns">
+                        <p><img src="../imgs/img1.jpg" alt="image for article" alt="article preview image"></p>
+                    </div>
+                    <div class="medium-8 large-6 columns">
+                        <h5><a href="#">Ingredients for Life Were Always Present on Earth, Comet Suggests</a></h5>
+                        <p>
+                            <span><i class="fi-torso"> By Thadeus &nbsp;&nbsp;</i></span>
+                            <span><i class="fi-calendar"> 11/23/16 &nbsp;&nbsp;</i></span>
+                            <span><i class="fi-comments"> 6 comments</i></span>
+                        </p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae impedit beatae, ipsum delectus aperiam nesciunt magni facilis ullam.</p>
+                    </div>
+                </div>
+
+                <hr>
+
+                <div style="text-align: center;"><button id="LoadMore" class="button">加载更多</button></div>
+                
+            </article>
+
+        </div>
+
+        <!-- right -->
+        <div class="medium-4 large-4 columns">
+
+            <aside>
+
+                <!-- 数字 -->
+                <div class="row small-up-3">
+
+                    <div class="column text-center">
+                        <i class="fi-social-facebook"></i>
+                        <h6 id="DomesticDiagnosis">86,009</h6>
+                        <p><small>国内确诊人数</small></p>
+                        <br>
+                    </div>
+
+                    <div class="column text-center">
+                        <i class="fi-social-twitter"></i>
+                        <h6 id="DomesticDeath">76,905</h6>
+                        <p><small>国内死亡人数</small></p>
+                        <br>
+                    </div>
+
+                    <div class="column text-center">
+                        <i class="fi-social-instagram"></i>
+                        <h6 id="DomestiCure">34,099</h6>
+                        <p><small>国内治愈人数</small></p>
+                        <br>
+                    </div>
+
+                    <div class="column text-center">
+                        <i class="fi-social-tumblr"></i>
+                        <h6 id="CasesAbroad">13,765</h6>
+                        <p><small>境外输入病例</small></p>
+                    </div>
+
+                    <div class="column text-center">
+                        <i class="fi-social-pinterest"></i>
+                        <h6 id="DiagnosisAbroad">9,283</h6>
+                        <p><small>国外确诊人数</small></p>
+                    </div>
+
+                    <div class="column text-center">
+                        <i class="fi-social-youtube"></i>
+                        <h6 id="DeathAbroad">99,000</h6>
+                        <p><small>国外死亡人数</small></p>
+                    </div>
+
+                    <div class="column text-center">
+                        <a href="EpidemicMap.html">详细数据</a>
+                    </div>
+
+                </div>
+
+                <br>
+
+                <!-- 排行榜 -->
+                <div id="NewsDesc" class="row column ">
+                    <p class="lead">热度排行榜</p>
+
+                    <div class="card" style="width: 300px;">
+                        <div class="media-object-section">
+                            <img class="thumbnail" src="../imgs/cat.jpg">
+                        </div>
+                        <div class="card-section media-object-section small-8">
+                          <h5><a href="" target="_blank">This is a card.</a></h5>                       
+                        </div>
+                    </div>
+
+                    <div class="card" style="width: 300px;">
+                        <div class="media-object-section">
+                            <img class="thumbnail" src="../imgs/img2.jpg">
+                        </div>
+                        <div class="card-section media-object-section small-8">
+                          <h5>This is a card.</h5>
+                        </div>
+                    </div>
+
+                    <div class="card" style="width: 300px;">
+                        <div class="media-object-section">
+                            <img class="thumbnail" src="../imgs/harley-davidson-BW9ki_tmouE-unsplash.jpg">
+                        </div>
+                        <div class="card-section media-object-section small-8">
+                          <h5>Are the stars out tonight? I don't know if it's cloudy or bright.</h5>
+                          
+                        </div>
+                    </div>
+                    
+                </div>
+
+            </aside>
+
+        </div>
+    </div>
+
+<footer>
+    <div class="row expanded callout secondary">
+        <div class="medium-4 columns">
+            <h5>学校</h5>
+            <p>广东药科大学</p>           
+        </div>
+
+        <div class="medium-4 columns">
+            <h5>开发者</h5>
+            <p>
+                <span>lbs，</span>
+                <span>ilanky，</span>
+                <span>凡杰飞</span>
+            </p>
+            <p>联系邮箱：lbs1558256238@outlook.com</p>
+        </div>
+
+        <div class="medium-4 columns">
+            <h5>备案信息</h5>
+            <p><a href="http://www.beian.miit.gov.cn" class="bottomA" target="_blank" style="text-decoration: none;">粤ICP备19133084号</a></p>
+        </div>
+
+    </div>
+
+    <div class="row expanded">
+
+        <div class="medium-9 columns">
+            <ul class="menu">
+                <li><a href="#">回到顶部</a></li>
+            </ul>
+        </div>
+
+        <div class="medium-3 columns">
+            <ul class="menu align-right">
+                <li class="menu-text">Copyright © 2020 LIF</li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+    <script src="../js/jquery-2.1.4.min.js"></script>
+    <script src="../js/foundation.js"></script>
+    <script>
+        $(document).foundation();
+    </script>
+</body>
+</html>

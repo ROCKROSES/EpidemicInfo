@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../bootstrap-4.4.1-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../swiper/swiper.min.css">
+    <script src="../js/jquery-3.4.1.min.js"></script>
+    <!-- <script src="https://unpkg.com/@popperjs/core@2"></script> -->
+    <script src="../bootstrap-4.4.1-dist/js/bootstrap.js"></script>
+    <script src="../bootstrap-4.4.1-dist/js/bootstrap.bundle.js"></script>
+    <script src="../swiper/swiper.min.js"></script>
+    <title>疫情信息分享</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        
+        .CarouselBox{
+            margin-top: 1rem;
+        }
+        
+        .middleBox{
+            margin-top: 2rem;
+        }
+        
+        .BoxMargin{
+            margin-bottom: 1rem;
+        }
+        
+        
+        .BottomBox{
+            position: relative;
+            height: 15rem;
+            background-color: #f6f9fa;
+        }
+        .BottomContent{
+            height: 10rem;
+            /* width: 80%; */
+            padding: 0 1rem;
+            margin: auto;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+        
+        
+        .swiper-container{
+            height: 23rem;
+            --swiper-theme-color: #f6f9fa;
+            --swiper-navigation-color: #f6f9fa;/* 单独设置按钮颜色 */
+            --swiper-navigation-size: 30px;/* 设置按钮大小 */
+        }
+        
+        @media (max-width: 1199.98px) {
+        
+        }
+        
+        @media (max-width: 991.98px) {
+            .swiper-container{
+                height: 18rem;
+            }
+        }
+        
+        @media (max-width: 767.98px) {
+            .swiper-container{
+                height: 15rem;
+            }
+        }
+        
+        @media (max-width: 575.98px) {
+            .swiper-container{
+                height: 10rem;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <!-- 导航 -->
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: rgb(248, 249, 250);;">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Dropdown
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+
+    <!-- 轮播 -->
+    <div class="container CarouselBox">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="../imgs/harley-davidson-zGzXsJUBQfs-unsplash.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <a href="#" style="color: aliceblue;"><h2>Third slide label</h2></a>
+                        <p style="color: aliceblue;">Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="../imgs/cat.jpg" class="card-img" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <a href="#" style="color: aliceblue;"><h2>First slide label</h2></a>
+                        <p style="color: aliceblue;">Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="../imgs/harley-davidson-BW9ki_tmouE-unsplash.jpg" class="card-img" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <a href="#" style="color: aliceblue;"><h2>Third slide label</h2></a>
+                        <p style="color: aliceblue;">Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                    </div>
+                </div>
+            </div>
+            <!--分页器 -->
+            <div class="swiper-pagination"></div>
+            
+            <!--导航按钮 -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+            
+            <!--滚动条 -->
+            <div class="swiper-scrollbar"></div>
+        </div>
+    </div>
+    
+
+    <!-- 中间内容 -->
+    <div class="container middleBox">
+        <div class="row">
+            <!-- 新闻列表 -->
+            <div class="col-sm-8 BoxMargin">
+                <div class="card">
+                    <!-- 导航 -->
+                    <div class="card-header" style="background-color: rgb(248, 249, 250);">
+                        <ul class="nav nav-tabs card-header-tabs" id="myTab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Active</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Link</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Disabled</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- 列表内容 -->
+                    <div class="card-body tab-content" id="myTabContent">
+
+                        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                            <div class="card mb-3">
+                                <div class="row no-gutters">
+                                    <div class="col-lg-4">
+                                        <img src="../imgs/harley-davidson-BW9ki_tmouE-unsplash.jpg" class="card-img" alt="...">
+                                    </div>
+                                    <div class="col-lg-8">
+                                        <div class="card-body">
+                                        <h5 class="card-title">Card title</h5>
+                                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                        <a href="#" class="">了解详情</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card mb-3">
+                                <div class="row no-gutters">
+                                    <div class="col-lg-4">
+                                        <img src="../imgs/photo-1555447965-79c1020bf4d8(1).jpg" class="card-img" alt="...">
+                                    </div>
+                                    <div class="col-lg-8">
+                                        <div class="card-body">
+                                        <h5 class="card-title">Card title</h5>
+                                        <p class="card-text">
+                                            因为计算机只能处理数字，如果要处理文本，就必须先把文本转换为数字才能处理。
+                                            最早的计算机在设计时采用8个比特最早的计算机最早的计算机最早的计算机最早的计算机
+                                        </p>
+                                        <a href="#" class="">了解详情</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <nav aria-label="Page navigation example">
+                                <ul class="pagination justify-content-center">
+                                    <li class="page-item disabled">
+                                        <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                                    </li>
+                                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#">Next</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+
+                        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
+                        <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 热点排行榜 -->
+            <div class="col-sm-4 BoxMargin">
+                <div class="card">
+                    <div class="card-header" style="background-color: rgb(248, 249, 250);">
+                        热点排行榜
+                    </div>
+
+                    <div class="card-body">
+                        <div>
+                            <h5 class="">Special title treatment</h5>
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                            <a href="#" class="">了解详情</a>
+                        </div>
+                        <hr>
+                        <div>
+                            <h5 class="">Special title treatment</h5>
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                            <a href="#" class="">了解详情</a>
+                        </div>
+                        <hr>
+                        <div>
+                            <h5 class="">Special title treatment</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <a href="#" class="">了解详情</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- 网站信息 -->
+    <div class="BottomBox">
+        <div class="BottomContent container ">
+            <div class="row">
+                <div class="col-lg-10">
+                    <p><a href="http://www.beian.miit.gov.cn" class="bottomA" target="_blank" style="text-decoration: none;">粤ICP备19133084号</a></p>
+                    <p>单位：广东药科大学</p>
+                    <p>开发者：lbs，ilanky，凡杰飞</p>
+                    <p>联系邮箱：hhaahhahhha@outlook.com</p>
+                </div> 
+                <div class="col-lg-2">
+                    <div style="float: left;"><a href="#">回到顶部</a></div>
+                </div>              
+            </div>           
+        </div>               
+    </div>
+</body>
+<script>
+    $(document).ready(function(){
+        var mySwiper = new Swiper ('.swiper-container', {
+            loop: true, // 循环模式选项
+            autoplay:true,
+            delay: 5000,
+            
+            //分页器
+            pagination: {
+                el: '.swiper-pagination',
+            },
+            
+            //前进后退按钮
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            
+            //滚动条
+            scrollbar: {
+                el: '.swiper-scrollbar',
+            },
+        })  
+    });
+</script>
+</html>
