@@ -2,9 +2,7 @@ $(document).ready(function(){
     // 获取评论并打印评论
     getComments();
 
-    /**
-     * 绑定点赞事件
-     */
+    //绑定点赞事件
     bindPraise();
 });
 
@@ -48,9 +46,16 @@ function readMore(){
 /**
  * 打印评论
  */
+
+//  var data = new Array();
+//  data[0] = {'commentid':0,'commentText':'test','childComments':new Array(),"headUrl":'./imgs/cat.jpg','username':'赵六',
+//             'commentDate':'1天前','praiseNum':0};
+// data[1] = {'commentid':1,'commentText':'test','childComments':new Array(),"headUrl":'./imgs/cat.jpg','username':'赵六',
+// 'commentDate':'1天前','praiseNum':0};
+
 function printComments(data){
     for(var i = 0 ; i < data.length ; i++){
-        printFirstLevelComment(data[i]['commentid'],data[i]['commentText'],data);
+        printFirstLevelComment(data[i]['commentid'],data[i]['commentText'],data[i]);
         for(var j = 0 ; j < data[i]['childComments'].length ; j++ ){
             printSecondLevelComment(data[i]['commentid'],data[i][j]['commentText'],data[i][j]);
         }
@@ -71,6 +76,76 @@ function matchPasswd(){
         alert('两次输入的密码不同，请重新输入')
     }
 }
+
+/**
+ * 登录
+ */
+function login() {  
+    
+    var username = $('#loginUsername').val();
+    var password = $('#loginPassword').val();
+    var code = $('#loginCode').val();
+
+    if(username != '' && password != '' && code != ''){    
+        $.ajax({
+            type: 'POST',
+            url: "",
+            data: {'username':username,'password':password,'code':code},
+            success: function (response) {
+                var result = jQuery.parseJSON(response);
+                // console.log(result);
+                if(result['status'] == 1){
+                    //登录成功，隐藏登录按钮
+                    $('#loginBtn').hide();
+                    alert('登录成功')
+                }
+            },
+            error: function(response){
+                console.log(response);
+                alert('登录失败，请检查你的网络连接');
+            }
+        });
+    }
+    else{
+        alert('请将信息填写完整');
+    }
+}
+
+/**
+ * 注册
+ */
+function register() {  
+    
+    var username = $('#registerUsername').val();
+    var account = $('#registerAccount').val();
+    var password = $('#registerPassword').val();
+    var code = $('#registerCode').val();
+
+    if(username != '' && account != '' && password != '' && code != ''){
+        $.ajax({
+            type: 'POST',
+            url: "",
+            data: {'username':username,'account':account,'password':password,'code':code},
+            success: function (response) {
+                var result = jQuery.parseJSON(response);
+                // console.log(result);
+                if(result['status'] == 1){
+                    //注册成功，自动登录，隐藏登录按钮
+                    $('#loginBtn').hide();
+                    alert('注册成功')
+                }
+            },
+            error: function(response){
+                console.log(response);
+                alert('注册失败，请检查你的网络连接')
+            }
+        });
+    }
+    else{
+        alert('请将信息填写完整');
+    }
+}
+
 
 //绑定点赞事件
 function bindPraise(){
@@ -255,7 +330,7 @@ function printFirstLevelComment(repliedCommentid,commentText,data){
                     .replace(/{{praiseNum}}/g,data['praiseNum']).replace(/{{commentText}}/g,commentText)
                     .replace(/{{repliedCommentid}}/g,repliedCommentid);
 
-    $('#commentsBox').append(tmp_model).append('<hr>');
+    $('#commentsBox').append(tmp_model);
 
 }
 

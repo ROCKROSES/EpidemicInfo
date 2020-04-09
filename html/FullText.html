@@ -127,7 +127,7 @@
         <div class="uk-margin">
             <textarea id="commentTextarea" class="uk-textarea textSize" rows="5" placeholder="输入你的评论"></textarea>
             <p class="uk-float-right" style="margin-bottom: 1rem;" uk-margin>
-                <a class="uk-button uk-button-primary"  href="#modal-group-1" uk-toggle>登录</a>
+                <a id="loginBtn" class="uk-button uk-button-primary"  href="#modal-group-1" uk-toggle>登录</a>
                 <button onclick="comment()" class="uk-button uk-button-primary">发表</button>
             </p>  
             <p class="uk-float-left" style="margin-bottom: 1rem;" uk-margin>
@@ -143,18 +143,18 @@
                     </div>
                     <div class="uk-modal-body">
                         <div class="uk-margin">
-                            <input class="uk-input" type="text" placeholder="请输入邮箱地址/手机号">
+                            <input id="loginAccount" class="uk-input" type="text" placeholder="请输入邮箱地址/手机号">
                         </div>
                         <div class="uk-margin">
-                            <input class="uk-input" type="password" placeholder="请输入密码">
+                            <input id="loginPassword" class="uk-input" type="password" placeholder="请输入密码">
                         </div>
                         <div class="uk-margin">
-                            <input class="uk-input uk-form-width-medium" type="text" placeholder="请输入验证码">
+                            <input id="loginCode" class="uk-input uk-form-width-medium" type="text" placeholder="请输入验证码">
                         </div>
                     </div>
                     <div class="uk-modal-footer uk-text-right">
                         <button class="uk-button uk-button-default uk-modal-close" type="button">取消</button>
-                        <button id="login" class="uk-button uk-button-primary">登录</>
+                        <button id="login" class="uk-button uk-button-primary" onclick="login()">登录</>
                     </div>
                 </div>
             </div>
@@ -168,10 +168,10 @@
                     </div>
                     <div class="uk-modal-body">
                         <div class="uk-margin">
-                            <input class="uk-input" type="text" placeholder="请输入用户名">
+                            <input id="registerUsername" class="uk-input" type="text" placeholder="请输入用户名">
                         </div>
                         <div class="uk-margin">
-                            <input class="uk-input" type="text" placeholder="请输入邮箱地址/手机号">
+                            <input id="registerAccount" class="uk-input" type="text" placeholder="请输入邮箱地址/手机号">
                         </div>
                         <div class="uk-margin">
                             <input id="first" class="uk-input" type="password" placeholder="请输入密码">
@@ -180,12 +180,12 @@
                             <input id="second" class="uk-input" onchange="matchPasswd()" type="password" placeholder="请再次输入密码">
                         </div>
                         <div class="uk-margin">
-                            <input class="uk-input uk-form-width-medium" type="text" placeholder="请输入验证码">
+                            <input id="registerCode" class="uk-input uk-form-width-medium" type="text" placeholder="请输入验证码">
                         </div>
                     </div>
                     <div class="uk-modal-footer uk-text-right">
                         <button class="uk-button uk-button-default uk-modal-close" type="button">取消</button>
-                        <button id="register" class="uk-button uk-button-primary" type="button">注册</button>
+                        <button id="register" class="uk-button uk-button-primary" type="button" onclick="register()">注册</button>
                     </div>
                 </div>
             </div>      
@@ -197,198 +197,7 @@
         <hr style="margin-top: 1rem;">
         <!-- 评论列表容器 -->
         <div id="commentsBox">
-
-            <ul class="uk-comment-list">
-                <li>
-                    <article class="uk-comment uk-comment-primary uk-visible-toggle" tabindex="-1">
-                        <header class="uk-comment-header uk-position-relative">
-                            <div class="uk-grid-medium uk-flex-middle" uk-grid>
-                                <div class="uk-width-auto">
-                                    <img class="uk-comment-avatar" src="../imgs/cat.jpg" style="max-height:3rem;" alt="">
-                                </div>
-                                <div class="uk-width-expand">
-                                    <h4 class="uk-comment-title uk-margin-remove">李四</h4>
-                                    <p class="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
-                                        <span href="javascript:;">12 天前</span>&nbsp;&nbsp;
-                                        <a class="praise" data-commentid="0" href="javascript:;"><em>点赞</em>&nbsp;&nbsp;<em>10</em></a>
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="uk-position-top-right uk-position-small">
-                                <button onclick="createReply(this)" class="uk-text-muted" id="0" data-commentid="0">回复</button>
-                            </div>
-                        </header>
-                        <div class="uk-comment-body">
-                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-                        </div>
-                    </article>
-
-                    
-                    <!-- 回复输入框中的commentid与其上面的那条评论的commentid相同，代表这个回复框要回复的是上面这条评论-->
-                    <!-- <div class="uk-margin">
-                        <textarea class="uk-textarea textSize" rows="3" placeholder="输入你的回复"></textarea>
-                        <p class="uk-float-right" style="margin-bottom: 1rem;" uk-margin>
-                            <button data-commentid="0" onclick="removeReply(this)" class="uk-button uk-button-default" type="button">取消</button>
-                            <button data-commentid="0" onclick="replyComment(this)" class="uk-button uk-button-primary">回复</button>
-                        </p>
-                        <hr>
-                    </div> -->
-
-
-                    <!-- 回复 -->
-                    <!-- 子评论容器 -->
-                    <ul id="childBox0">
-                        <li>
-                            <article class="uk-comment  uk-visible-toggle" tabindex="-1">
-                                <header class="uk-comment-header uk-position-relative">
-                                    <div class="uk-grid-medium uk-flex-middle" uk-grid>
-                                        <div class="uk-width-auto">
-                                            <img class="uk-comment-avatar" src="../imgs/cat.jpg" style="max-height:3rem;" alt="">
-                                        </div>
-                                        <div class="uk-width-expand">
-                                            <h4 class="uk-comment-title uk-margin-remove">王五</h4>
-                                            <p class="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
-                                                <span href="javascript:;">12 天前</span>&nbsp;&nbsp;
-                                                <a class="praise" data-commentid="0-0" href="javascript:;"><em>点赞</em>&nbsp;&nbsp;<em>10</em></a>
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="uk-position-top-right uk-position-small">
-                                        <button onclick="createReply(this)" class="uk-text-muted" id="0-0" data-commentid="0-0">回复</button>
-                                    </div>
-                                </header>
-                                <div class="uk-comment-body">
-                                    <p>我很帅</p>
-                                </div>
-                                <hr>
-                            </article>
-                        </li>
-
-
-
-                        <li>
-                            <article class="uk-comment  uk-visible-toggle" tabindex="-1">
-                                <header class="uk-comment-header uk-position-relative">
-                                    <div class="uk-grid-medium uk-flex-middle" uk-grid>
-                                        <div class="uk-width-auto">
-                                            <img class="uk-comment-avatar" src="../imgs/cat.jpg" style="max-height:3rem;" alt="">
-                                        </div>
-                                        <div class="uk-width-expand">
-                                            <h4 class="uk-comment-title uk-margin-remove">张三</h4>
-                                            <p class="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
-                                                <span href="javascript:;">12 天前</span>&nbsp;&nbsp;
-                                                <a class="praise" data-commentid="0-1" href="javascript:;"><em>点赞</em>&nbsp;&nbsp;<em>10</em></a>
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    <!-- 子评论的id的前缀为父评论的id+‘-’ -->
-                                    <div class="uk-position-top-right uk-position-small">
-                                        <button onclick="createReply(this)" class="uk-text-muted" id="0-1" data-commentid="0-1">回复</button>
-                                    </div>
-                                </header>
-                                <div class="uk-comment-body">
-                                    <p>我更帅&nbsp;<span class="uk-text-primary">//回复王五:</span><span class="uk-text-muted"> 我很帅</span></p>
-                                </div>
-                                <hr>
-                            </article>
-                        </li>
-
-                    
-
-                        <li>
-                            <article class="uk-comment  uk-visible-toggle" tabindex="-1">
-                                <header class="uk-comment-header uk-position-relative">
-                                    <div class="uk-grid-medium uk-flex-middle" uk-grid>
-                                        <div class="uk-width-auto">
-                                            <img class="uk-comment-avatar" src="../imgs/cat.jpg" style="max-height:3rem;" alt="">
-                                        </div>
-                                        <div class="uk-width-expand">
-                                            <h4 class="uk-comment-title uk-margin-remove">王五</h4>
-                                            <p class="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
-                                                <span href="javascript:;">12 天前</span>&nbsp;&nbsp;
-                                                <a class="praise" data-commentid="0-2" href="javascript:;"><em>点赞</em>&nbsp;&nbsp;<em>10</em></a>
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="uk-position-top-right uk-position-small">
-                                        <button onclick="createReply(this)" class="uk-text-muted" id="0-2" data-commentid="0-2">回复</button>
-                                    </div>
-                                </header>
-                                <div class="uk-comment-body">
-                                    <p>我最帅&nbsp;<span class="uk-text-primary">//回复张三:</span><span class="uk-text-muted"> 我更帅</span></p>
-                                </div>
-                                <hr>
-                            </article>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-            <hr>
-
-            <ul class="uk-comment-list">
-                <li>
-                    <article class="uk-comment uk-comment-primary uk-visible-toggle" tabindex="-1">
-                        <header class="uk-comment-header uk-position-relative">
-                            <div class="uk-grid-medium uk-flex-middle" uk-grid>
-                                <div class="uk-width-auto">
-                                    <img class="uk-comment-avatar" src="../imgs/cat.jpg" style="max-height:3rem;" alt="">
-                                </div>
-                                <div class="uk-width-expand">
-                                    <h4 class="uk-comment-title uk-margin-remove"><a class="uk-link-reset" href="#">Author</a></h4>
-                                    <p class="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
-                                        <span href="#">12 天前</span>&nbsp;&nbsp;
-                                        <a class="praise" data-commentid="1" href="javascript:;"><em>点赞</em>&nbsp;&nbsp;<em>10</em></a>
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="uk-position-top-right uk-position-small">
-                                <button onclick="createReply(this)" class="uk-text-muted" id="1" data-commentid="1">回复</button>
-                            </div>
-                        </header>
-                        <div class="uk-comment-body">
-                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor </p>
-                        </div>
-                    </article>
-                    
-                    <ul id="childBox1">
-
-                    </ul>
-                </li>
-            </ul>
-            <hr>
-
-            <ul class="uk-comment-list">
-                <li>
-                    <article class="uk-comment uk-comment-primary uk-visible-toggle" tabindex="-1">
-                        <header class="uk-comment-header uk-position-relative">
-                            <div class="uk-grid-medium uk-flex-middle" uk-grid>
-                                <div class="uk-width-auto">
-                                    <img class="uk-comment-avatar" src="../imgs/cat.jpg" style="max-height:3rem;" alt="">
-                                </div>
-                                <div class="uk-width-expand">
-                                    <h4 class="uk-comment-title uk-margin-remove">Author</h4>
-                                    <p class="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
-                                        <span href="javascript:;">12 天前</span>&nbsp;&nbsp;
-                                        <a class="praise" data-commentid="2" href="javascript:;"><em>点赞</em>&nbsp;&nbsp;<em>12</em></a>
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="uk-position-top-right uk-position-small">
-                                <button onclick="createReply(this)" class="uk-text-muted" id="2" data-commentid="2">回复</button>
-                            </div>
-                        </header>
-                        <div class="uk-comment-body">
-                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-                        </div>
-                    </article> 
-                    
-                    <ul id="childBox2">
-
-                    </ul>
-                </li>
-            </ul>
-            <hr>
+            
         </div>
         <!-- ↑评论列表容器↑ -->
     </div>
