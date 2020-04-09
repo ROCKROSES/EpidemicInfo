@@ -2,10 +2,442 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/foundation.min.css">
+    <link rel="stylesheet" href="../css/motion-ui.min.css" />
+    <link rel="stylesheet" href="../uikit-3.3.7/css/uikit.min.css">
+    <!-- <link rel="stylesheet" href="../uikit-3.3.7/css/uikit-rtl.min.css"> -->
+    <link rel="stylesheet" href="../css/FullText.css">
+    <script src="../js/vue.min.js"></script>
+    <script src="../js/jquery-3.4.1.min.js"></script>
+    <script src="../uikit-3.3.7/js/uikit.min.js"></script>
+    <script src="../uikit-3.3.7/js/uikit-icons.min.js"></script>
+    <!-- 网站标题为新闻标题 + ‘-疫情信息分享’ -->
+    <title>FullText</title>
 </head>
 <body>
+    <div class="NavBox">
+        <div class="title-bar" data-responsive-toggle="example-menu" data-hide-for="medium">
+            <button class="menu-icon" type="button" data-toggle="example-menu"></button>
+            <div class="title-bar-title">Menu</div>
+        </div>
+          
+        <div class="top-bar" id="example-menu">
+            <div class="top-bar-left">
+                <ul class="dropdown menu" data-dropdown-menu>
+                    <li class="menu-text">疫情信息分享</li>
+                    <li>
+                        <a href="#">最新消息</a>
+                        <ul class="menu vertical">
+                            <li><a href="#">疫情新闻</a></li>
+                            <li><a href="#">防疫知识</a></li>
+                            <li><a href="#">鉴真辟谣</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">疫情地图</a></li>
+                    <li><a href="#">发布文章</a></li>
+                </ul>
+            </div>
+            <div class="top-bar-right">
+                <ul class="menu">
+                    <li><a href="#">登录</a></li>
+                    <li><a href="#">注册</a></li>
+                    <li><input type="search" placeholder="输入你想了解的..."></li>
+                    <li><button type="button" class="button">搜索</button></li>
+                </ul>
+            </div>
+        </div>
+    </div>
     
+    <br>
+
+    <div class="row expanded collapse marginTop">
+        <div class="column">
+            <div class="large-article-header">
+                <div class="large-article-header-content">
+                    <div class="center-container">
+                        <div class="article-date">
+                            <p>发布于2020年4月5日</p>
+                        </div>
+                        <div class="article-title">
+                            <h1>全国昨日新增确诊病例30例 5例为广东本土病例</h1>
+                        </div>    
+                        <div class="article-title">
+                            <h5>（原标题：截至4月4日24时新型冠状病毒肺炎疫情最新情况）</h5>
+                        </div>                        
+                        <div class="article-details">
+                            <div class="article-author">
+                                <div style="width: 3rem;">
+                                    <img src="../imgs/cat.jpg" alt="" />
+                                </div>                                  
+                                <a href="#">Jane Austen</a>
+                            </div>
+                            <div class="article-comments">
+                                <a href="#"><i class="fa fa-comment" aria-hidden="true">3</i> 评论</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>   
+
+    <div class="container">
+        <p>4月4日0—24时，31个省（自治区、直辖市）和新疆生产建设兵团报告新增确诊病例30例，其中25例为境外输入病例，5例为本土病例（广东5例）；新增死亡病例3例（湖北3例）；新增疑似病例11例，均为境外输入病例。</p>
+        <br>
+        <p>当日新增治愈出院病例213例，解除医学观察的密切接触者1869人，重症病例减少36例。</p>
+        <br>
+        <div style="text-align: center;">
+            <img src="../imgs/cat.jpg" alt="" style="max-height: 15rem;">
+            <!-- 图片备注 -->
+            <p style="color:grey ;"><em>这是一只猫</em></p>           
+        </div>
+        <br>
+        <p>境外输入现有确诊病例697例（含重症病例18例），现有疑似病例107例。累计确诊病例913例，累计治愈出院病例216例，累计死亡病例0例。</p>
+        <br>
+        <p>截至4月4日24时，据31个省（自治区、直辖市）和新疆生产建设兵团报告，现有确诊病例1376例（其中重症病例295例），累计治愈出院病例76964例，累计死亡病例3329例，累计报告确诊病例81669例，现有疑似病例107例。累计追踪到密切接触者713110人，尚在医学观察的密切接触者17436人。</p>
+        <br>
+        <div style="text-align: center;">
+            <img src="../imgs/img1.jpg" alt="" style="max-height: 15rem;">
+            <p style="color:grey ;"><em>这是一个人</em></p>           
+        </div>       
+        <br>
+        <p>湖北新增确诊病例0例（武汉0例），新增治愈出院病例183例（武汉183例），新增死亡病例3例（武汉3例），现有确诊病例648例（武汉644例），其中重症病例267例（武汉264例）。累计治愈出院病例63945例（武汉46794例），累计死亡病例3210例（武汉2570例），累计确诊病例67803例（武汉50008例）。新增疑似病例0例（武汉0例），现有疑似病例0例（武汉0例）。</p>
+        <br>
+        <p>31个省（自治区、直辖市）和新疆生产建设兵团报告新增无症状感染者47例,其中境外输入无症状感染者16例；当日转为确诊病例3例（境外输入3例）；当日解除医学观察50例（境外输入8例）。尚在医学观察无症状感染者1024例（境外输入244例）。</p>
+        <br>
+        <div style="text-align: center;">
+            <img src="../imgs/patrick-hendry-jd0hS7Vhn_A-unsplash.jpg" alt="" style="max-height: 15rem;">
+            <p style="color:grey ;"><em>这是一个人</em></p>           
+        </div>       
+        <br>
+        <p>累计收到港澳台地区通报确诊病例1261例：香港特别行政区862例（出院186例，死亡4例），澳门特别行政区44例（出院10例），台湾地区355例（出院50例，死亡5例）。</p>
+        <br>
+
+    </div>
+
+    
+    <!-- 评论 -->
+    <div class="container">
+        <br>
+        <p>评论 <em>65</em></p>
+        <hr>
+
+        <p class="uk-text-muted uk-text-italic">来评论一下吧 ~~</p>
+        <div class="uk-margin">
+            <textarea id="commentTextarea" class="uk-textarea textSize" rows="5" placeholder="输入你的评论"></textarea>
+            <p class="uk-float-right" style="margin-bottom: 1rem;" uk-margin>
+                <a class="uk-button uk-button-primary"  href="#modal-group-1" uk-toggle>登录</a>
+                <button onclick="comment()" class="uk-button uk-button-primary">发表</button>
+            </p>  
+            <p class="uk-float-left" style="margin-bottom: 1rem;" uk-margin>
+                <a class="uk-button uk-button-default" href="#modal-group-2" uk-toggle>注册</a>
+            </p>  
+            
+            <!-- 登录弹出窗 -->
+            <div id="modal-group-1" class="uk-flex-top" uk-modal>
+                <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
+                    <button class="uk-modal-close-default" type="button" uk-close></button>
+                    <div class="uk-modal-header">
+                        <h2 class="uk-modal-title">登录</h2>
+                    </div>
+                    <div class="uk-modal-body">
+                        <div class="uk-margin">
+                            <input class="uk-input" type="text" placeholder="请输入邮箱地址/手机号">
+                        </div>
+                        <div class="uk-margin">
+                            <input class="uk-input" type="password" placeholder="请输入密码">
+                        </div>
+                        <div class="uk-margin">
+                            <input class="uk-input uk-form-width-medium" type="text" placeholder="请输入验证码">
+                        </div>
+                    </div>
+                    <div class="uk-modal-footer uk-text-right">
+                        <button class="uk-button uk-button-default uk-modal-close" type="button">取消</button>
+                        <button id="login" class="uk-button uk-button-primary">登录</>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 注册弹出窗 -->
+            <div id="modal-group-2" class="uk-flex-top" uk-modal>
+                <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
+                    <button class="uk-modal-close-default" type="button" uk-close></button>
+                    <div class="uk-modal-header">
+                        <h2 class="uk-modal-title">注册</h2>
+                    </div>
+                    <div class="uk-modal-body">
+                        <div class="uk-margin">
+                            <input class="uk-input" type="text" placeholder="请输入用户名">
+                        </div>
+                        <div class="uk-margin">
+                            <input class="uk-input" type="text" placeholder="请输入邮箱地址/手机号">
+                        </div>
+                        <div class="uk-margin">
+                            <input id="first" class="uk-input" type="password" placeholder="请输入密码">
+                        </div>
+                        <div class="uk-margin">
+                            <input id="second" class="uk-input" onchange="matchPasswd()" type="password" placeholder="请再次输入密码">
+                        </div>
+                        <div class="uk-margin">
+                            <input class="uk-input uk-form-width-medium" type="text" placeholder="请输入验证码">
+                        </div>
+                    </div>
+                    <div class="uk-modal-footer uk-text-right">
+                        <button class="uk-button uk-button-default uk-modal-close" type="button">取消</button>
+                        <button id="register" class="uk-button uk-button-primary" type="button">注册</button>
+                    </div>
+                </div>
+            </div>      
+        </div>
+        <script src="../js/FullText.js"></script>
+
+
+        <!-- 评论列表 -->
+        <hr style="margin-top: 1rem;">
+        <!-- 评论列表容器 -->
+        <div id="commentsBox">
+
+            <ul class="uk-comment-list">
+                <li>
+                    <article class="uk-comment uk-comment-primary uk-visible-toggle" tabindex="-1">
+                        <header class="uk-comment-header uk-position-relative">
+                            <div class="uk-grid-medium uk-flex-middle" uk-grid>
+                                <div class="uk-width-auto">
+                                    <img class="uk-comment-avatar" src="../imgs/cat.jpg" style="max-height:3rem;" alt="">
+                                </div>
+                                <div class="uk-width-expand">
+                                    <h4 class="uk-comment-title uk-margin-remove">李四</h4>
+                                    <p class="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
+                                        <span href="javascript:;">12 天前</span>&nbsp;&nbsp;
+                                        <a class="praise" data-commentid="0" href="javascript:;"><em>点赞</em>&nbsp;&nbsp;<em>10</em></a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="uk-position-top-right uk-position-small">
+                                <button onclick="createReply(this)" class="uk-text-muted" id="0" data-commentid="0">回复</button>
+                            </div>
+                        </header>
+                        <div class="uk-comment-body">
+                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+                        </div>
+                    </article>
+
+                    
+                    <!-- 回复输入框中的commentid与其上面的那条评论的commentid相同，代表这个回复框要回复的是上面这条评论-->
+                    <!-- <div class="uk-margin">
+                        <textarea class="uk-textarea textSize" rows="3" placeholder="输入你的回复"></textarea>
+                        <p class="uk-float-right" style="margin-bottom: 1rem;" uk-margin>
+                            <button data-commentid="0" onclick="removeReply(this)" class="uk-button uk-button-default" type="button">取消</button>
+                            <button data-commentid="0" onclick="replyComment(this)" class="uk-button uk-button-primary">回复</button>
+                        </p>
+                        <hr>
+                    </div> -->
+
+
+                    <!-- 回复 -->
+                    <!-- 子评论容器 -->
+                    <ul id="childBox0">
+                        <li>
+                            <article class="uk-comment  uk-visible-toggle" tabindex="-1">
+                                <header class="uk-comment-header uk-position-relative">
+                                    <div class="uk-grid-medium uk-flex-middle" uk-grid>
+                                        <div class="uk-width-auto">
+                                            <img class="uk-comment-avatar" src="../imgs/cat.jpg" style="max-height:3rem;" alt="">
+                                        </div>
+                                        <div class="uk-width-expand">
+                                            <h4 class="uk-comment-title uk-margin-remove">王五</h4>
+                                            <p class="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
+                                                <span href="javascript:;">12 天前</span>&nbsp;&nbsp;
+                                                <a class="praise" data-commentid="0-0" href="javascript:;"><em>点赞</em>&nbsp;&nbsp;<em>10</em></a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="uk-position-top-right uk-position-small">
+                                        <button onclick="createReply(this)" class="uk-text-muted" id="0-0" data-commentid="0-0">回复</button>
+                                    </div>
+                                </header>
+                                <div class="uk-comment-body">
+                                    <p>我很帅</p>
+                                </div>
+                                <hr>
+                            </article>
+                        </li>
+
+
+
+                        <li>
+                            <article class="uk-comment  uk-visible-toggle" tabindex="-1">
+                                <header class="uk-comment-header uk-position-relative">
+                                    <div class="uk-grid-medium uk-flex-middle" uk-grid>
+                                        <div class="uk-width-auto">
+                                            <img class="uk-comment-avatar" src="../imgs/cat.jpg" style="max-height:3rem;" alt="">
+                                        </div>
+                                        <div class="uk-width-expand">
+                                            <h4 class="uk-comment-title uk-margin-remove">张三</h4>
+                                            <p class="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
+                                                <span href="javascript:;">12 天前</span>&nbsp;&nbsp;
+                                                <a class="praise" data-commentid="0-1" href="javascript:;"><em>点赞</em>&nbsp;&nbsp;<em>10</em></a>
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <!-- 子评论的id的前缀为父评论的id+‘-’ -->
+                                    <div class="uk-position-top-right uk-position-small">
+                                        <button onclick="createReply(this)" class="uk-text-muted" id="0-1" data-commentid="0-1">回复</button>
+                                    </div>
+                                </header>
+                                <div class="uk-comment-body">
+                                    <p>我更帅&nbsp;<span class="uk-text-primary">//回复王五:</span><span class="uk-text-muted"> 我很帅</span></p>
+                                </div>
+                                <hr>
+                            </article>
+                        </li>
+
+                    
+
+                        <li>
+                            <article class="uk-comment  uk-visible-toggle" tabindex="-1">
+                                <header class="uk-comment-header uk-position-relative">
+                                    <div class="uk-grid-medium uk-flex-middle" uk-grid>
+                                        <div class="uk-width-auto">
+                                            <img class="uk-comment-avatar" src="../imgs/cat.jpg" style="max-height:3rem;" alt="">
+                                        </div>
+                                        <div class="uk-width-expand">
+                                            <h4 class="uk-comment-title uk-margin-remove">王五</h4>
+                                            <p class="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
+                                                <span href="javascript:;">12 天前</span>&nbsp;&nbsp;
+                                                <a class="praise" data-commentid="0-2" href="javascript:;"><em>点赞</em>&nbsp;&nbsp;<em>10</em></a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="uk-position-top-right uk-position-small">
+                                        <button onclick="createReply(this)" class="uk-text-muted" id="0-2" data-commentid="0-2">回复</button>
+                                    </div>
+                                </header>
+                                <div class="uk-comment-body">
+                                    <p>我最帅&nbsp;<span class="uk-text-primary">//回复张三:</span><span class="uk-text-muted"> 我更帅</span></p>
+                                </div>
+                                <hr>
+                            </article>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <hr>
+
+            <ul class="uk-comment-list">
+                <li>
+                    <article class="uk-comment uk-comment-primary uk-visible-toggle" tabindex="-1">
+                        <header class="uk-comment-header uk-position-relative">
+                            <div class="uk-grid-medium uk-flex-middle" uk-grid>
+                                <div class="uk-width-auto">
+                                    <img class="uk-comment-avatar" src="../imgs/cat.jpg" style="max-height:3rem;" alt="">
+                                </div>
+                                <div class="uk-width-expand">
+                                    <h4 class="uk-comment-title uk-margin-remove"><a class="uk-link-reset" href="#">Author</a></h4>
+                                    <p class="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
+                                        <span href="#">12 天前</span>&nbsp;&nbsp;
+                                        <a class="praise" data-commentid="1" href="javascript:;"><em>点赞</em>&nbsp;&nbsp;<em>10</em></a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="uk-position-top-right uk-position-small">
+                                <button onclick="createReply(this)" class="uk-text-muted" id="1" data-commentid="1">回复</button>
+                            </div>
+                        </header>
+                        <div class="uk-comment-body">
+                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor </p>
+                        </div>
+                    </article>
+                    
+                    <ul id="childBox1">
+
+                    </ul>
+                </li>
+            </ul>
+            <hr>
+
+            <ul class="uk-comment-list">
+                <li>
+                    <article class="uk-comment uk-comment-primary uk-visible-toggle" tabindex="-1">
+                        <header class="uk-comment-header uk-position-relative">
+                            <div class="uk-grid-medium uk-flex-middle" uk-grid>
+                                <div class="uk-width-auto">
+                                    <img class="uk-comment-avatar" src="../imgs/cat.jpg" style="max-height:3rem;" alt="">
+                                </div>
+                                <div class="uk-width-expand">
+                                    <h4 class="uk-comment-title uk-margin-remove">Author</h4>
+                                    <p class="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
+                                        <span href="javascript:;">12 天前</span>&nbsp;&nbsp;
+                                        <a class="praise" data-commentid="2" href="javascript:;"><em>点赞</em>&nbsp;&nbsp;<em>12</em></a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="uk-position-top-right uk-position-small">
+                                <button onclick="createReply(this)" class="uk-text-muted" id="2" data-commentid="2">回复</button>
+                            </div>
+                        </header>
+                        <div class="uk-comment-body">
+                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+                        </div>
+                    </article> 
+                    
+                    <ul id="childBox2">
+
+                    </ul>
+                </li>
+            </ul>
+            <hr>
+        </div>
+    </div>
+    
+    <div style="text-align: center;"><button id="readMore" class="button" onclick="readMore()">查看更多</button></div>
+
+    <footer>
+        <div class="row expanded callout secondary">
+            <div class="medium-4 columns">
+                <h5>学校</h5>
+                <p>广东药科大学</p>           
+            </div>
+    
+            <div class="medium-4 columns">
+                <h5>开发者</h5>
+                <p>
+                    <span>lbs，</span>
+                    <span>ilanky，</span>
+                    <span>凡杰飞</span>
+                </p>
+                <p>联系邮箱：lbs1558256238@outlook.com</p>
+            </div>
+    
+            <div class="medium-4 columns">
+                <h5>备案信息</h5>
+                <p><a href="http://www.beian.miit.gov.cn" class="bottomA" target="_blank" style="text-decoration: none;">粤ICP备19133084号</a></p>
+            </div>
+    
+        </div>
+    
+        <div class="row expanded">
+    
+            <div class="medium-9 columns">
+                <ul class="menu">
+                    <li><a href="#">回到顶部</a></li>
+                </ul>
+            </div>
+    
+            <div class="medium-3 columns">
+                <ul class="menu align-right">
+                    <li class="menu-text">Copyright © 2020 LIF</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/jquery-2.1.4.min.js"></script>
+    <script src="../js/foundation.js"></script>
+    <script>
+        $(document).foundation();
+    </script>
 </body>
 </html>

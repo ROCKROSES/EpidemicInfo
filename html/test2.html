@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+
+
+    <li>
+        <article class="uk-comment  uk-visible-toggle" tabindex="-1">
+            <header class="uk-comment-header uk-position-relative">
+                <div class="uk-grid-medium uk-flex-middle" uk-grid>
+                    <div class="uk-width-auto">
+                        <img class="uk-comment-avatar" src="../imgs/cat.jpg" style="max-height:3rem;" alt="">
+                    </div>
+                    <div class="uk-width-expand">
+                        <h4 class="uk-comment-title uk-margin-remove"><a class="uk-link-reset" href="#">王五</a></h4>
+                        <p class="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
+                            <a class="uk-link-reset" href="#">12 天前</a>&nbsp;&nbsp;
+                            <a class="praise" data-commentid="0-2" href="javascript:;"><em>点赞</em>&nbsp;&nbsp;<em>10</em></a>
+                        </p>
+                    </div>
+                </div>
+                <div class="uk-position-top-right uk-position-small">
+                    <button onclick="createReply(this)" class="uk-text-muted" id="0-2" data-commentid="0-2">回复</button>
+                </div>
+            </header>
+            <div class="uk-comment-body">
+                <p>我最帅&nbsp;<span class="uk-text-primary">//回复张三:</span><span class="uk-text-muted"> 我更帅</span></p>
+            </div>
+            <hr>
+        </article>
+    </li>
+
+
+    <ul class="uk-comment-list">
+        <li>
+            <article class="uk-comment uk-comment-primary uk-visible-toggle" tabindex="-1">
+                <header class="uk-comment-header uk-position-relative">
+                    <div class="uk-grid-medium uk-flex-middle" uk-grid>
+                        <div class="uk-width-auto">
+                            <img class="uk-comment-avatar" src="../imgs/cat.jpg" style="max-height:3rem;" alt="">
+                        </div>
+                        <div class="uk-width-expand">
+                            <h4 class="uk-comment-title uk-margin-remove"><a class="uk-link-reset" href="#">Author</a></h4>
+                            <p class="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
+                                <a class="uk-link-reset" href="#">12 天前</a>&nbsp;&nbsp;
+                                <a class="praise" data-commentid="1" href="javascript:;"><em>点赞</em>&nbsp;&nbsp;<em>10</em></a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="uk-position-top-right uk-position-small">
+                        <button onclick="createReply(this)" class="uk-text-muted" id="1" data-commentid="1">回复</button>
+                    </div>
+                </header>
+                <div class="uk-comment-body">
+                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor </p>
+                </div>
+            </article>
+            
+            <ul id="childBox1">
+
+            </ul>
+        </li>
+    </ul>
+
+
+</body>
+</html>
